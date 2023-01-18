@@ -6,6 +6,12 @@ const weth = require('../../config/wethABI.json');
 const config = require('../../config/config');
 const logger = require('../../config/logger');
 
+/**
+ * NOTE : lot can be improved here, like code can be moved to separate controller
+ *    -> middleware can added if required
+ *    -> query params data can be validated with joi
+ *    -> etc...
+ */
 async function listenForTransferEvents() {
   const addr = '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619';
   const provider = new ethers.providers.InfuraProvider(
