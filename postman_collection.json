@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "bc2a7274-683c-4b23-a37b-cfe608156578",
+		"name": "Polygon APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20577058"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"krishnasvr9393@gmail.com\",\n    \"password\" : \"saikrishna1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/auth/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "If email is already taken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"abcedf652@gmail.com\",\n    \"password\" : \"saikrishna1\",\n    \"name\" : \"Krishna\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "393"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"189-/jQBT1d2D7aK58D2Ouv7CWWpQ9U\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 11:26:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"message\": \"Email already taken\",\n    \"stack\": \"Error: Email already taken\\n    at Object.createUser (/Users/krishna/Downloads/node-express-boilerplate-1.7.0/src/services/user.service.js:12:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async /Users/krishna/Downloads/node-express-boilerplate-1.7.0/src/controllers/auth.controller.js:6:16\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"krishnasvr9393@gmail.com\",\n    \"password\" : \"saikrishna1\",\n    \"name\" : \"Krishna\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "650"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28a-Wd7BLcRFQEzviP57IFDEiD9Ei4I\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Dec 2022 11:30:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"role\": \"user\",\n        \"isEmailVerified\": false,\n        \"email\": \"krishnasvr9393@gmail.com\",\n        \"name\": \"Krishna\",\n        \"id\": \"63931c54beaf8d1c7119ed75\"\n    },\n    \"tokens\": {\n        \"access\": {\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzkzMWM1NGJlYWY4ZDFjNzExOWVkNzUiLCJpYXQiOjE2NzA1ODU0MjgsImV4cCI6MTY3MDU4NzIyOCwidHlwZSI6ImFjY2VzcyJ9.L-NCJrGfbcVHVaowQUEJ6JVz-LKV0mzMdtck_d35G0o\",\n            \"expires\": \"2022-12-09T12:00:28.692Z\"\n        },\n        \"refresh\": {\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzkzMWM1NGJlYWY4ZDFjNzExOWVkNzUiLCJpYXQiOjE2NzA1ODU0MjgsImV4cCI6MTY3MzE3NzQyOCwidHlwZSI6InJlZnJlc2gifQ.kU2haJ131ptNrUIZpYmTM11sGhr3LAEw_GPC5x5JdG4\",\n            \"expires\": \"2023-01-08T11:30:28.694Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"krishnasvr9393@gmail.com\",\n    \"password\":\"saikrishna1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start listening for transfer events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"krishnasvr9393@gmail.com\",\n    \"password\":\"saikrishna1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/events/start-listening",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"events",
+						"start-listening"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"krishnasvr9393@gmail.com\",\n    \"password\":\"saikrishna1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/events/fetch-events?page=4&address=0x45dda9cb7c25131df268515131f647d726f50608",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"events",
+						"fetch-events"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "4"
+						},
+						{
+							"key": "address",
+							"value": "0x45dda9cb7c25131df268515131f647d726f50608"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
