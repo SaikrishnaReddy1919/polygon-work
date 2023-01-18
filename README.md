@@ -27,8 +27,8 @@
 Clone the repo:
 
 ```bash
-git clone https://github.com/SaikrishnaReddy1919/polygon-task.git
-cd polygon-task
+git clone https://github.com/SaikrishnaReddy1919/polygon-work.git
+cd polygon-work
 ```
 
 Install the dependencies:
