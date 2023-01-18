@@ -1,5 +1,8 @@
 # Polygon Task
 
+NOTE: as this server is not deployed, here is a small video that takes through all the apis.
+[youtube](https://www.youtube.com/watch?v=JK8ReBh1stQ)
+
 ## Table of Contents
 
 - [Polygon Task](#polygon-task)
